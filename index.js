@@ -18,7 +18,7 @@ const questions = () => {
     {
       type: 'input',
       name: 'installation',
-      message: 'Enter a description on how to contribute to your project',
+      message: 'Enter a description on how to install project',
     },
     {
       type: 'input',
@@ -85,7 +85,7 @@ const generateReadMe = ({ title, description, installation, usage, license, cont
 ## Description
 ${description}  
 
-${licenseBadge(license)}
+${badge(license)}
 
 ## Table of Contents
 1. [ Description ](#description)
@@ -106,7 +106,7 @@ ${usage}
 
 <a name= "license" ></a>
 ## License
-${copyrightText(license)}
+${copyrightAutocomplete(license)}
 
 <a name= "contributing" ></a>
 ## Contributing

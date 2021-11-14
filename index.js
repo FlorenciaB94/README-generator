@@ -52,6 +52,17 @@ const questions = () => {
     },
   ]);
 };
+
+//Badge for license
+const badge = (copyright) => {
+  if (copyright === "IBM Public License Version 1.0") {
+    return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+  } if (copyright === "The Apache License") {
+    return `[![License:](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+  } if (copyright === "MIT License") {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  }
+};
 // Select Copyright License
 const copyRightAutocomplete = (copyright) => {
   if (copyright === "IBM Public License Version 1.0") {
@@ -67,21 +78,11 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
   }
 };
-//Badge for license
-const badge = (copyright) => {
-  if (copyright === "IBM Public License Version 1.0") {
-    return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
-  } if (copyright === "The Apache License") {
-    return `[![License:](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-  } if (copyright === "MIT License") {
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-  }
-};
 
 const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, GitHub, email }) =>
 
   `# ${title}
-<a name="description"></a>
+
 ## Description
 ${description}  
 
@@ -96,31 +97,31 @@ ${badge(license)}
 6. [ Tests ](#tests)
 7. [ Questions ](#questions)
 
-<a name= "installation" ></a>
+
 ## Installation
 ${installation}
 
-<a name= "usage" ></a>
+
 ## Usage
 ${usage}
 
-<a name= "license" ></a>
-## License
-${copyrightAutocomplete(license)}
 
-<a name= "contributing" ></a>
+## License
+${copyRightAutocomplete(license)}
+
+
 ## Contributing
 ${contributing}
 
-<a name= "tests" ></a>
+
 ## Tests
 ${tests}
 
-<a name= "GitHub" ></a>
+
 ## GitHub
 ${GitHub}
 
-<a name= "email" ></a>
+
 ## Email
 ${email}`;
 

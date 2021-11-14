@@ -17,43 +17,38 @@ const questions = () => {
     },
     {
       type: 'input',
-      name: 'contents',
-      message: 'What is your favorite hobby?',
-    },
-    {
-      type: 'input',
       name: 'installation',
-      message: 'What is your favorite food?',
+      message: 'Enter a description on how to contribute to your project',
     },
     {
       type: 'input',
       name: 'usage',
-      message: 'Enter your GitHub Username',
+      message: 'Enter a description on how to use your project',
     },
     {
       type: 'input',
       name: 'license',
-      message: 'Enter your LinkedIn URL.',
+      message: 'Select what type of license you would like for your project',
     },
     {
       type: 'input',
       name: 'contributing',
-      message: 'Enter your LinkedIn URL.',
+      message: 'Enter a description on how to contribute to your project',
     },
     {
       type: 'input',
       name: 'tests',
-      message: 'Enter your LinkedIn URL.',
+      message: 'Enter a description for test instructions',
     },
     {
       type: 'input',
       name: 'GitHub',
-      message: 'Enter your LinkedIn URL.',
+      message: 'Enter your GitHub URL.',
     },
     {
       type: 'input',
       name: 'email',
-      message: 'Enter your LinkedIn URL.',
+      message: 'Enter your email',
     },
   ]);
 };
@@ -83,13 +78,38 @@ const badge = (copyright) => {
   }
 };
 
-const generateReadMe = ({ title, description, contents, installation, usage, license, contributing, tests, GitHub, email }) =>
+const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, GitHub, email }) =>
 
   `# ${title}
 <a name="description"></a>
 ## Description
 ${description}  
+
 ${licenseBadge(license)}
+
+## Table of Contents
+1. [ Description. ](#description)
+2. [ Installation. ](#installation)
+3. [ Usage. ](#usage)
+4. [ License. ](#license)
+5. [ Contributing. ](#contribsection)
+6. [ Tests. ](#testsection)
+7. [ Questions. ](#questionssection)
+
+<a name= "installation" ></a>
+## Installation
+${installation}
+
+<a name= "usage" ></a>
+## Usage
+${usage}
+
+<a name="license"></a>
+## License
+${copyrightText(license)}
+
+
+
 
 // Bonus using writeFileSync as a promise
 const init = () => {

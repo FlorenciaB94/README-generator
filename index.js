@@ -88,13 +88,13 @@ ${description}
 ${licenseBadge(license)}
 
 ## Table of Contents
-1. [ Description. ](#description)
-2. [ Installation. ](#installation)
-3. [ Usage. ](#usage)
-4. [ License. ](#license)
-5. [ Contributing. ](#contribsection)
-6. [ Tests. ](#testsection)
-7. [ Questions. ](#questionssection)
+1. [ Description ](#description)
+2. [ Installation ](#installation)
+3. [ Usage ](#usage)
+4. [ License ](#license)
+5. [ Contributing ](#contributing)
+6. [ Tests ](#tests)
+7. [ Questions ](#questions)
 
 <a name= "installation" ></a>
 ## Installation
@@ -104,19 +104,31 @@ ${installation}
 ## Usage
 ${usage}
 
-<a name="license"></a>
+<a name= "license" ></a>
 ## License
 ${copyrightText(license)}
 
+<a name= "contributing" ></a>
+## Contributing
+${contributing}
+
+<a name= "tests" ></a>
+## Tests
+${tests}
+
+<a name= "GitHub" ></a>
+## GitHub
+${GitHub}
+
+<a name= "email" ></a>
+## Email
+${email}`;
 
 
-
-// Bonus using writeFileSync as a promise
 const init = () => {
   questions()
-    // Use writeFileSync method to use promises instead of a callback function
-    .then((answers) => fs.writeFileSync('index.html', generateReadMe(answers)))
-    .then(() => console.log('Successfully wrote to index.html'))
+    .then((answers) => fs.writeFileSync('README.md', generateReadMe(answers)))
+    .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
 };
 

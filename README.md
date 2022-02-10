@@ -1,47 +1,41 @@
-# Example
+## Demo
 
-![Demo](/assets/images/README_generator.gif)
+Demo
+(assets/images/README_generator.gif)
 
 ## Description
 
-Small demo of application
-
-undefined
+The app will allow you to create a README file by following the prompts on screen.
 
 ## Table of Contents
 
-1. [ Description ](#description)
-2. [ Installation ](#installation)
-3. [ Usage ](#usage)
-4. [ License ](#license)
-5. [ Contributing ](#contributing)
-6. [ Tests ](#tests)
-7. [ Questions ](#questions)
+1. [ Installation ](#installation)
+2. [ Usage ](#usage)
+3. [ License ](#license)
+4. [ Contributing ](#contributing)
+5. [ Tests ](#tests)
+6. [ Questions ](#questions)
 
 ## Installation
 
-Follow README instructions
+To look at the project, follow GitHub's instructions on how to clone a repository to your computer here: [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 ## Usage
 
-Follow README instructions
+To start the application, open an integrated terminal from the "index.js" file. Run the following command:
+
+```
+npm i
+```
+
+This will install the necessary node package to run the program. After the installation is complete, run the following command:
+
+```
+node index.js
+```
+
+This will start the application. Answer all the questions on the screen, and you will see a "README.md" file generated based on your answers.
 
 ## License
 
-undefined
-
-## Contributing
-
-Follow README instructions
-
-## Tests
-
-Follow README instructions
-
-## GitHub
-
-Example
-
-## Email
-
-example@email.com
+This application is published under MIT License.

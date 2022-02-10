@@ -1,7 +1,6 @@
 ## Demo
 
-Demo
-(assets/images/README_generator.gif)
+![Demo](assets/images/README_generator.gif)
 
 ## Description
 
